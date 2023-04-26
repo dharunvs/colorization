@@ -1,8 +1,13 @@
 
 import argparse
-import matplotlib.pyplot as plt
-
 from colorizers import *
+
+import matplotlib
+import matplotlib.pyplot as plt
+# matplotlib.use('GTK3Agg')
+# matplotlib.use('TKagg')
+
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i','--img_path', type=str, default='imgs/ansel_adams3.jpg')
@@ -53,4 +58,5 @@ plt.subplot(2,2,4)
 plt.imshow(out_img_siggraph17)
 plt.title('Output (SIGGRAPH 17)')
 plt.axis('off')
-plt.show()
+# plt.show()
+plt.ion()
